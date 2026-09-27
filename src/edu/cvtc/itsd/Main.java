@@ -287,10 +287,16 @@ public class Main {
     labelState = new JLabel("updated", JLabel.LEADING);
     labelState.setFont(fontMain);
     labelState.setAlignmentX(JComponent.CENTER_ALIGNMENT);
-    labelState.setForeground(Color.magenta);
-    panelStatus.add(labelState);
+   labelState.setForeground(Color.magenta);
+  panelStatus.add(labelState);
 
-    panelStatus.add(Box.createVerticalGlue());
+  JButton buttonNext = new JButton("Next Customer");
+  buttonNext.addActionListener(handler);
+  buttonNext.setAlignmentX(JComponent.CENTER_ALIGNMENT);
+  buttonNext.setForeground(Color.green);
+  panelStatus.add(buttonNext);
+
+  panelStatus.add(Box.createVerticalGlue());
 
     // Error panel ////////////////////////////////////////////////////////////
     JPanel panelError = new JPanel();
